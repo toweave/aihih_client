@@ -1,5 +1,5 @@
 import Image from "next/image";
-import { Button } from "@/components/ui/button"
+import { Popover, PopoverButton, PopoverPanel } from '@headlessui/react'
 
 export default function Home() {
   return (
@@ -9,7 +9,6 @@ export default function Home() {
         Hello world!
       </h1>
 
-      <Button>Click me</Button>
 
       <button className="bg-sky-500 hover:bg-sky-700">Save changes</button>
 
