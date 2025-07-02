@@ -1,9 +1,11 @@
 import { Button } from "@/components/ui/button"
 import { Search, ChevronDown } from 'lucide-react';
+import { ModeToggle } from "@/components/theme/ModeToggle";
 
 export default function Home() {
   return (
-    <div className="antialiased lg:bg-zinc-100 dark:bg-zinc-900 dark:lg:bg-zinc-950 dark" style={{ colorScheme: "dark" }}>
+    // <div className="antialiased lg:bg-zinc-100 dark:bg-zinc-900 dark:lg:bg-zinc-950 dark" style={{ colorScheme: "light" }}>
+    <div>
       <div
         className={"relative isolate flex min-h-svh w-full flex-col bg-white lg:bg-zinc-100 dark:bg-zinc-900 dark:lg:bg-zinc-950"}>
         <header className="flex items-center px-4">
@@ -57,6 +59,7 @@ export default function Home() {
                 aria-hidden="true"></span>
 
              <Search color={"var(--color-zinc-400)"} size={14} />
+                <ModeToggle></ModeToggle>
 
               </a></span><span className="relative"><span
                 className="absolute inset-x-2 -bottom-2.5 h-0.5 rounded-full bg-zinc-950 dark:bg-white"
