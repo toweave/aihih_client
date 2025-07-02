@@ -1,0 +1,23 @@
+@import "tailwindcss";
+
+// 自定义 dark 模式变体需要在 tailwind 指令之后
+@custom-variant dark (&:where(.dark, .dark *));
+
+@theme {
+}
+
+.test {
+  @apply
+  mx-auto
+  inline-grid
+  max-w-lg
+  grid-cols-1
+  gap-3
+  justify-center
+  *:*:first:size-9
+  *:*:first:rounded-md
+  sm:grid-cols-10
+  sm:flex-row
+  sm:*:*:first:aspect-square
+  sm:*:*:first:w-full
+}

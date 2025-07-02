@@ -1,56 +1,104 @@
 import Image from "next/image";
+import { Button } from "@/components/ui/button"
 
 export default function Home() {
   return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <main className="flex flex-col gap-[32px] row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="list-inside list-decimal text-sm/6 text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
-          <li className="mb-2 tracking-[-.01em]">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-[family-name:var(--font-geist-mono)] font-semibold">
-              src/app/page.tsx
-            </code>
-            .
-          </li>
-          <li className="tracking-[-.01em]">
-            Save and see your changes instantly.
-          </li>
-        </ol>
+    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20">
 
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:w-auto"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 w-full sm:w-auto md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
+      <h1 className="text-3xl font-bold underline">
+        Hello world!
+      </h1>
+
+      <Button>Click me</Button>
+
+      <button className="bg-sky-500 hover:bg-sky-700">Save changes</button>
+
+      <main className="flex flex-col gap-[32px] row-start-2 items-center sm:items-start">
+        <div className="bg-mint-500">
+          123
         </div>
+
+        <div style={{backgroundColor: "var(--color-red-500)"}}>
+          12.13
+        </div>
+
+        <div>
+          <div className="bg-sky-50">1</div>
+          <div className="bg-sky-100">2</div>
+          <div className="bg-sky-200">3</div>
+          <div className="bg-sky-300">4</div>
+          <div className="bg-sky-400">5</div>
+          <div className="bg-sky-500">6</div>
+          <div className="bg-sky-600">7</div>
+          <div className="bg-sky-700">8</div>
+          <div className="bg-sky-800">9</div>
+          <div className="bg-sky-900">0</div>
+          <div className="bg-sky-950">1</div>
+        </div>
+
+        <h1 className="bg-sky-950">This headline will use Poppins.</h1>
+
+        <div
+          className="flex items-center gap-4 rounded-lg bg-white p-6 shadow-md outline outline-black/5 dark:bg-gray-800">
+          <span
+            className="inline-flex shrink-0 rounded-full border border-pink-300 bg-pink-100 p-2 dark:border-pink-300/10 dark:bg-pink-400/10">
+            <svg className="size-6 stroke-pink-700 dark:stroke-pink-500">sss</svg>
+          </span>
+          <div>
+            <p className="text-gray-700 dark:text-gray-400">
+              <span className="font-medium text-gray-950 dark:text-white">Tom Watson</span> mentioned you in
+              <span className="font-medium text-gray-950 dark:text-white">Logo redesign</span>
+            </p>
+            <time className="mt-1 block text-gray-500" dateTime="9:37">9:37am</time>
+          </div>
+        </div>
+
+        <div className="test">
+          <div className="flex items-center gap-1.5 sm:flex-col">
+            <div className="bg-sky-500/10"></div>
+          </div>
+          <div className="flex items-center gap-1.5 sm:flex-col">
+            <div className="bg-sky-500/20"></div>
+          </div>
+          <div className="flex items-center gap-1.5 sm:flex-col">
+            <div className="bg-sky-500/30"></div>
+          </div>
+          <div className="flex items-center gap-1.5 sm:flex-col">
+            <div className="bg-sky-500/40"></div>
+          </div>
+          <div className="flex items-center gap-1.5 sm:flex-col">
+            <div className="bg-sky-500/50"></div>
+          </div>
+          <div className="flex items-center gap-1.5 sm:flex-col">
+            <div className="bg-sky-500/60"></div>
+          </div>
+          <div className="flex items-center gap-1.5 sm:flex-col">
+            <div className="bg-sky-500/70"></div>
+          </div>
+          <div className="flex items-center gap-1.5 sm:flex-col">
+            <div className="bg-sky-500/80"></div>
+          </div>
+          <div className="flex items-center gap-1.5 sm:flex-col">
+            <div className="bg-sky-500/90"></div>
+          </div>
+          <div className="flex items-center gap-1.5 sm:flex-col">
+            <div className="bg-sky-500/100"></div>
+          </div>
+        </div>
+
+        <div className="bg-white dark:bg-gray-800 rounded-lg px-6 py-8 ring shadow-xl ring-gray-900/5">
+          <div>
+            <span className="inline-flex items-center justify-center rounded-md bg-indigo-500 p-2 shadow-lg">
+              <svg className="h-6 w-6 stroke-white"></svg>
+            </span>
+          </div>
+          <h3 className="text-gray-900 dark:text-white mt-5 text-base font-medium tracking-tight ">Writes upside-down</h3>
+          <p className="text-gray-500 dark:text-gray-400 mt-2 text-sm ">
+            The Zero Gravity Pen can be used to write in any orientation, including upside-down. It even works in outer space.
+          </p>
+      </div>
       </main>
+
       <footer className="row-start-3 flex gap-[24px] flex-wrap items-center justify-center">
         <a
           className="flex items-center gap-2 hover:underline hover:underline-offset-4"
