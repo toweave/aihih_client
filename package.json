@@ -4,9 +4,10 @@
   "private": true,
   "scripts": {
     "dev": "next dev --turbopack",
-    "build": "next build",
+    "build": "npm run ignoreBuildStep && next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "ignoreBuildStep": "if [ \"$VERCEL_GITHUB_COMMIT_REF\" != \"main\" ]; then echo 'Skipping build on non-main branch'; exit 0; fi"
   },
   "dependencies": {
     "@radix-ui/react-dialog": "^1.1.14",
