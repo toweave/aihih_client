@@ -2,29 +2,6 @@
 
 @custom-variant dark (&:where(.dark, .dark *));
 
-@theme {
-}
-
-.template {
-  @apply antialiased lg:bg-zinc-100 dark:bg-zinc-900 dark:lg:bg-zinc-950
-}
-
-.test {
-  @apply
-  mx-auto
-  inline-grid
-  max-w-lg
-  grid-cols-1
-  gap-3
-  justify-center
-  *:*:first:size-9
-  *:*:first:rounded-md
-  sm:grid-cols-10
-  sm:flex-row
-  sm:*:*:first:aspect-square
-  sm:*:*:first:w-full
-}
-
 @theme inline {
 
   --radius-sm: calc(var(--radius) - 4px);
@@ -238,4 +215,8 @@
   body {
     @apply bg-background text-foreground;
   }
+}
+
+.root-layout {
+  @apply relative isolate flex min-h-svh w-full flex-col bg-white lg:bg-zinc-100 dark:bg-zinc-900 dark:lg:bg-zinc-950
 }

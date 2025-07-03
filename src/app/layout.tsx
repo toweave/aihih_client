@@ -3,6 +3,7 @@ import "@/styles/globals.scss";
 
 import { ThemeProvider } from "@/providers/theme-provider"
 import { Props } from "@/types/app";
+import Frame from "@/components/custom/frame/Frame";
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://aihih.com"), // 增加 metadataBase 属性
@@ -84,13 +85,8 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <body>
-        <ThemeProvider
-          attribute="class"
-          defaultTheme="system"
-          enableSystem
-          disableTransitionOnChange
-        >
-          {children}
+        <ThemeProvider attribute="class" defaultTheme="system" enableSystem disableTransitionOnChange>
+          <Frame>{children}</Frame>
         </ThemeProvider>
       </body>
     </html>

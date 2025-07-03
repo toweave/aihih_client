@@ -1,0 +1,12 @@
+
+.frame {
+  //color: #fff;
+  box-sizing: border-box;
+}
+
+:global(.root-layout) {
+  .frame {
+    //color: #000;
+    box-sizing: border-box;
+  }
+}
