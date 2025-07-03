@@ -7,6 +7,8 @@ const nextConfig: NextConfig = {
   },
   sassOptions: {
     additionalData: `$var: red;`,
+    silenceDeprecations: ['legacy-js-api'],
+    quietDeps: true,
   },
 };
 
