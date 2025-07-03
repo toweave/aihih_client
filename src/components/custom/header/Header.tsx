@@ -133,6 +133,7 @@ const Header = () => {
                   alt="Tailwind Labs"
                   width={120}
                   height={36}
+                  priority
                 />
               </span>
               {/*<ChevronDown size={14} className="ml-auto text-zinc-400" />*/}
@@ -286,10 +287,7 @@ const Header = () => {
           {/* 右侧操作区域 */}
           <div className="flex items-center gap-1">
             {/* 搜索按钮 */}
-            <button
-              aria-label="Search"
-              className={`${buttonBaseClass} group`}
-            >
+            <button aria-label="Search" className={`${buttonBaseClass} group`}>
               <span className={touchTargetClass} aria-hidden="true" />
               <Search size={16} color={"var(--color-zinc-400)"} />
             </button>
@@ -297,29 +295,9 @@ const Header = () => {
             {/* 主题切换 */}
             <ModeToggle />
 
-            {/* 收件箱按钮 - 带活跃状态指示器 */}
-            <div className="relative">
-              <span
-                className="absolute inset-x-2 -bottom-2.5 h-0.5 rounded-full
-                          bg-zinc-950 dark:bg-white opacity-100"
-              />
-              <a
-                aria-label="Inbox"
-                href="/demos/stacked/inbox"
-                className={`${buttonBaseClass} group`}
-                data-current="true"
-              >
-                <span className={touchTargetClass} aria-hidden="true" />
-                <Search size={16} color={"var(--color-zinc-400)"} />
-              </a>
-            </div>
-
             {/* 用户头像菜单 */}
-            <button
-              className={`${buttonBaseClass} group`}
-              aria-haspopup="menu"
-              aria-expanded="false"
-            >
+            <button className={`${buttonBaseClass} relative group`} aria-haspopup="menu" aria-expanded="false">
+              <span className="absolute inset-x-2 -bottom-2.5 h-0.5 rounded-full bg-zinc-950 dark:bg-white opacity-100" />
               <span className={touchTargetClass} aria-hidden="true" />
               <span className={avatarClass}>
                 <Image
