@@ -195,7 +195,7 @@ const Header = () => {
               >
                 <span className={`w-[120px] h-[36px] inline-block`}>
                   <Image
-                    className="size-full rounded-full"
+                    className="size-full"
                     src="/logo/logo-pmomp.svg"
                     alt="Tailwind Labs"
                     width={120}
@@ -217,7 +217,7 @@ const Header = () => {
               <NavigationMenu viewport={false}>
                 <NavigationMenuList>
                   <NavigationMenuItem>
-                    <NavigationMenuTrigger>Home</NavigationMenuTrigger>
+                    <NavigationMenuTrigger className="bg-transparent">Home</NavigationMenuTrigger>
                     <NavigationMenuContent>
                       <ul className="grid gap-2 md:w-[400px] lg:w-[500px] lg:grid-cols-[.75fr_1fr]">
                         <li className="row-span-3">
@@ -245,7 +245,7 @@ const Header = () => {
                     </NavigationMenuContent>
                   </NavigationMenuItem>
                   <NavigationMenuItem>
-                    <NavigationMenuTrigger>Components</NavigationMenuTrigger>
+                    <NavigationMenuTrigger className="bg-transparent">Components</NavigationMenuTrigger>
                     <NavigationMenuContent>
                       <ul className="grid w-[400px] gap-2 md:w-[500px] md:grid-cols-2 lg:w-[600px]">
                         {components.map((component) => (
@@ -261,12 +261,12 @@ const Header = () => {
                     </NavigationMenuContent>
                   </NavigationMenuItem>
                   <NavigationMenuItem>
-                    <NavigationMenuLink asChild className={navigationMenuTriggerStyle()}>
+                    <NavigationMenuLink asChild className={`${navigationMenuTriggerStyle()} bg-transparent`}>
                       <Link href="/docs">Docs</Link>
                     </NavigationMenuLink>
                   </NavigationMenuItem>
                   <NavigationMenuItem>
-                    <NavigationMenuTrigger>List</NavigationMenuTrigger>
+                    <NavigationMenuTrigger className="bg-transparent">List</NavigationMenuTrigger>
                     <NavigationMenuContent>
                       <ul className="grid w-[300px] gap-4">
                         <li>
@@ -299,7 +299,7 @@ const Header = () => {
                     </NavigationMenuContent>
                   </NavigationMenuItem>
                   <NavigationMenuItem>
-                    <NavigationMenuTrigger>Simple</NavigationMenuTrigger>
+                    <NavigationMenuTrigger className="bg-transparent">Simple</NavigationMenuTrigger>
                     <NavigationMenuContent>
                       <ul className="grid w-[200px] gap-4">
                         <li>
@@ -317,7 +317,7 @@ const Header = () => {
                     </NavigationMenuContent>
                   </NavigationMenuItem>
                   <NavigationMenuItem>
-                    <NavigationMenuTrigger>With Icon</NavigationMenuTrigger>
+                    <NavigationMenuTrigger className="bg-transparent">With Icon</NavigationMenuTrigger>
                     <NavigationMenuContent>
                       <ul className="grid w-[200px] gap-4">
                         <li>
