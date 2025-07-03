@@ -27,12 +27,6 @@ const Header = () => {
     transition-colors duration-200
   `;
 
-  // const iconClass = `
-  //   size-6 sm:size-5 shrink-0 fill-zinc-500
-  //   dark:fill-zinc-400 group-hover:fill-zinc-950
-  //   dark:group-hover:fill-white
-  // `;
-
   const avatarClass = `
     inline-grid shrink-0 align-middle size-7 sm:size-6
     rounded-full outline -outline-offset-1 
@@ -108,7 +102,7 @@ const Header = () => {
       <div className="py-2.5 lg:hidden">
         <button
           aria-label="Open navigation"
-          className={`${buttonBaseClass} group`}
+          className={`${buttonBaseClass}`}
           type="button"
         >
           <span className={touchTargetClass} aria-hidden="true" />
@@ -122,7 +116,7 @@ const Header = () => {
           {/* 品牌/Logo区域 - 桌面端显示 */}
           <div className="max-lg:hidden">
             <button
-              className={`${buttonBaseClass} group`}
+              className={`${buttonBaseClass}`}
               aria-haspopup="menu"
               aria-expanded="false"
             >
@@ -287,7 +281,7 @@ const Header = () => {
           {/* 右侧操作区域 */}
           <div className="flex items-center gap-1">
             {/* 搜索按钮 */}
-            <button aria-label="Search" className={`${buttonBaseClass} group`}>
+            <button aria-label="Search" className={`${buttonBaseClass}`}>
               <span className={touchTargetClass} aria-hidden="true" />
               <Search size={16} color={"var(--color-zinc-400)"} />
             </button>
@@ -296,7 +290,7 @@ const Header = () => {
             <ModeToggle />
 
             {/* 用户头像菜单 */}
-            <button className={`${buttonBaseClass} relative group`} aria-haspopup="menu" aria-expanded="false">
+            <button className={`${buttonBaseClass} relative`} aria-haspopup="menu" aria-expanded="false">
               <span className="absolute inset-x-2 -bottom-2.5 h-0.5 rounded-full bg-zinc-950 dark:bg-white opacity-100" />
               <span className={touchTargetClass} aria-hidden="true" />
               <span className={avatarClass}>
